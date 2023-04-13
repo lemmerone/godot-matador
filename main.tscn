@@ -5,7 +5,7 @@
 
 [node name="Main" type="Node"]
 script = ExtResource("1_f6e0p")
-countWall = 10
+countWall = 6
 
 [node name="World" parent="." instance=ExtResource("1_kutdq")]
 

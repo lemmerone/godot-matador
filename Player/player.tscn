@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5ka4q4vq1vpx"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ixlwm"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xgxii"]
+
+[node name="Player" type="CharacterBody3D"]
+
+[node name="Pivot" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Pivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_ixlwm")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_xgxii")
