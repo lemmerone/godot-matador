@@ -1,4 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://b5ka4q4vq1vpx"]
+[gd_scene load_steps=7 format=3 uid="uid://b5ka4q4vq1vpx"]
+
+[ext_resource type="Script" path="res://Player/player.gd" id="1_ejmbr"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xgxii"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pkwxm"]
 albedo_color = Color(0, 0.360784, 0.639216, 1)
@@ -6,17 +10,26 @@ albedo_color = Color(0, 0.360784, 0.639216, 1)
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ixlwm"]
 material = SubResource("StandardMaterial3D_pkwxm")
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xgxii"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ghc7u"]
+albedo_color = Color(0, 0.360784, 0.639216, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_hlv0n"]
+material = SubResource("StandardMaterial3D_ghc7u")
+size = Vector3(0.2, 0.2, 1)
 
 [node name="Player" type="CharacterBody3D"]
-
-[node name="Pivot" type="Node3D" parent="."]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Pivot"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-mesh = SubResource("CapsuleMesh_ixlwm")
-skeleton = NodePath("../..")
+script = ExtResource("1_ejmbr")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_xgxii")
+
+[node name="Body" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_ixlwm")
+
+[node name="Arm" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.02, 0.5)
+mesh = SubResource("BoxMesh_hlv0n")
+
+[node name="Pivot" type="Node3D" parent="."]

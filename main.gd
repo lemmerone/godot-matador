@@ -1,8 +1,7 @@
 extends Node
 
 var wall = preload("res://World/Wall/wall.tscn")
-@export var countWall = 5
-
+@export var countWall = 6
 
 func _ready():
 	wall_setting(countWall, Vector3.ZERO)

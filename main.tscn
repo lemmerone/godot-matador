@@ -1,17 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://c2tlrblo00eu6"]
+[gd_scene load_steps=4 format=3 uid="uid://c2tlrblo00eu6"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_f6e0p"]
 [ext_resource type="PackedScene" uid="uid://c7m1richxkw1d" path="res://World/world.tscn" id="1_kutdq"]
+[ext_resource type="PackedScene" uid="uid://b5ka4q4vq1vpx" path="res://Player/player.tscn" id="3_1lx15"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_f6e0p")
-countWall = 6
 
 [node name="World" parent="." instance=ExtResource("1_kutdq")]
+
+[node name="Player" parent="." instance=ExtResource("3_1lx15")]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1, 0)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 40.7268, 0)
-size = 157.038
+transform = Transform3D(1, 0, 0, 0, 0.729494, 0.683987, 0, -0.683987, 0.729494, 0, 11.5304, 14.7309)
+current = true
