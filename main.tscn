@@ -5,6 +5,7 @@
 
 [node name="Main" type="Node"]
 script = ExtResource("1_f6e0p")
+countWall = 10
 
 [node name="World" parent="." instance=ExtResource("1_kutdq")]
 
@@ -12,4 +13,5 @@ script = ExtResource("1_f6e0p")
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1, 0)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 41.4323, 0)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 40.7268, 0)
+size = 157.038
