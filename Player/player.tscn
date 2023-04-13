@@ -1,6 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://b5ka4q4vq1vpx"]
+[gd_scene load_steps=4 format=3 uid="uid://b5ka4q4vq1vpx"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pkwxm"]
+albedo_color = Color(0, 0.360784, 0.639216, 1)
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ixlwm"]
+material = SubResource("StandardMaterial3D_pkwxm")
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xgxii"]
 
