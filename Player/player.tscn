@@ -20,8 +20,6 @@ size = Vector3(0.2, 0.2, 1)
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_ejmbr")
 
-[node name="Pivot" type="Node3D" parent="."]
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_xgxii")
@@ -33,3 +31,5 @@ mesh = SubResource("CapsuleMesh_ixlwm")
 [node name="Arm" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.02, 0.5)
 mesh = SubResource("BoxMesh_hlv0n")
+
+[node name="Pivot" type="Node3D" parent="."]
