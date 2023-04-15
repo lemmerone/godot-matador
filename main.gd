@@ -1,7 +1,13 @@
 extends Node
 
 var wall = preload("res://World/Wall/wall.tscn")
-@export var countWall = 6
+var countWall = 6
+
+func set_const(value):
+	countWall = value
+	
+func get_const():
+	return countWall
 
 func _ready():
 	wall_setting(countWall, Vector3.ZERO)
