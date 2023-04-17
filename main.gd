@@ -1,7 +1,7 @@
 extends Node
 
 var wall = preload("res://World/Wall/wall.tscn")
-var countWall = 6
+var countWall = 7
 
 func set_const(value):
 	countWall = value
