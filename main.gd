@@ -1,28 +1,8 @@
 extends Node
 
-var wall = preload("res://World/Wall/wall.tscn")
-var countWall = 7
+@onready var wall_generator = get_node("/root/WallGenerator")
 
-func set_const(value):
-	countWall = value
-	
-func get_const():
-	return countWall
+@export var countWall = 7
 
 func _ready():
-	wall_setting(countWall, Vector3.ZERO)
-
-func wall_setting(count, center):
-	var angle_step = 2.0 * PI / count
-	var radius = 10 / (2 * tan(PI / count))
-	var angle = 0
-	for i in range(0, count):
-		var direction = Vector3(sin(angle), 0, cos(angle))
-		var pos = center + direction * radius
-
-		var newWall = wall.instantiate()
-		newWall.position = pos
-		newWall.rotation.y = angle
-		$World.add_child(newWall)
-
-		angle += angle_step
+	wall_generator.wall_setting(countWall, Vector3.ZERO, $World)

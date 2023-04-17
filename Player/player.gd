@@ -10,8 +10,8 @@ const DODGE_SPEED = 2
 func direction_zero():
 	direction = (transform.basis * Vector3.ZERO).normalized()
 
-func _get_spacing(wall):
-	return 2 * PI / wall
+func _get_spacing(count):
+	return 2 * PI / count
 	
 func _process(delta):
 	if (Input.is_action_just_pressed("rotation_right")):
