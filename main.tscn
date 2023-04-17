@@ -15,6 +15,6 @@ script = ExtResource("1_f6e0p")
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1, 0)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-1, -8.74228e-08, -3.82137e-15, -5.6607e-08, 0.647508, 0.762058, -6.66213e-08, 0.762058, -0.647508, -0.491784, 15.6403, -10.9796)
+transform = Transform3D(-1, -8.74228e-08, 7.78408e-15, -5.6607e-08, 0.647508, 0.762058, -6.66213e-08, 0.762058, -0.647508, -0.491784, 20.8756, -20.6501)
 visible = false
 current = true
