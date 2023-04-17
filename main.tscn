@@ -8,7 +8,7 @@
 
 [node name="Main" type="Node"]
 script = ExtResource("1_f6e0p")
-countWall = 5
+num_sides = 5
 
 [node name="World" parent="." instance=ExtResource("1_kutdq")]
 
@@ -23,7 +23,12 @@ visible = false
 current = true
 
 [node name="SpawnPath" type="Path3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.51168, 6.20605, -5.34119)
 curve = SubResource("Curve3D_i2xko")
 
 [node name="PathLocation" type="PathFollow3D" parent="SpawnPath"]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -1, 0, 0)
+
+[node name="BullTimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="BullTimer" to="." method="_on_bull_timer_timeout"]

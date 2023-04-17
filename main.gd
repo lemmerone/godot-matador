@@ -1,8 +1,7 @@
 extends Node
 
-@onready var wall_generator = get_node("/root/WallGenerator")
-
-@export var countWall = 0
+@onready var wallGenerator = get_node("/root/WallGenerator")
+@export var num_sides = 0
 
 func _ready():
-	wall_generator.wall_setting(countWall, Vector3.ZERO, $World)
+	wallGenerator.wall_setting(num_sides, Vector3.ZERO, $World)
