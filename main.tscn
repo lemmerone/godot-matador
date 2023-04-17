@@ -1,11 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://c2tlrblo00eu6"]
+[gd_scene load_steps=5 format=3 uid="uid://c2tlrblo00eu6"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_f6e0p"]
 [ext_resource type="PackedScene" uid="uid://c7m1richxkw1d" path="res://World/world.tscn" id="1_kutdq"]
 [ext_resource type="PackedScene" uid="uid://b5ka4q4vq1vpx" path="res://Player/player.tscn" id="3_1lx15"]
 
+[sub_resource type="Curve3D" id="Curve3D_i2xko"]
+
 [node name="Main" type="Node"]
 script = ExtResource("1_f6e0p")
+countWall = 5
 
 [node name="World" parent="." instance=ExtResource("1_kutdq")]
 
@@ -18,3 +21,9 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1, 
 transform = Transform3D(-1, -8.74228e-08, 7.78408e-15, -5.6607e-08, 0.647508, 0.762058, -6.66213e-08, 0.762058, -0.647508, -0.491784, 20.8756, -20.6501)
 visible = false
 current = true
+
+[node name="SpawnPath" type="Path3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.51168, 6.20605, -5.34119)
+curve = SubResource("Curve3D_i2xko")
+
+[node name="PathLocation" type="PathFollow3D" parent="SpawnPath"]

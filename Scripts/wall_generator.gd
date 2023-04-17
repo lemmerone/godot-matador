@@ -1,19 +1,16 @@
 extends Node
 
 var wall = preload("res://World/Wall/wall.tscn")
-var countWall
+var side_length = 10
 
-func wall_setting(count, center, node):
-	var angle = 0
-	var angle_step = 2.0 * PI / count
-	var radius = 10 / (2 * tan(PI / count))
-	for i in range(0, count):
-		var direction = Vector3(sin(angle), 0, cos(angle))
-		var pos = center + direction * radius
-
+func wall_setting(num_sides, center, node):
+	var angle_increment = 2 * PI / num_sides
+	var radius = side_length / (2 * tan(PI / num_sides))
+	for i in range(num_sides):
 		var newWall = wall.instantiate()
-		newWall.position = pos
-		newWall.rotation.y = angle
+		var angle = i * angle_increment
+		
+		newWall.position = center + Vector3(sin(angle), 0, cos(angle)) * radius
+		newWall.rotate_y(angle)
+		
 		node.add_child(newWall)
-
-		angle += angle_step
