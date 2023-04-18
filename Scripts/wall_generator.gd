@@ -1,7 +1,7 @@
 extends Node
 
 var wall = preload("res://World/Wall/wall.tscn")
-var side_length = 10
+var side_length = 20
 var center_walls = []
 
 func wall_setting(num_sides, center, node):

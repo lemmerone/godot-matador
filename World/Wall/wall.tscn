@@ -4,14 +4,14 @@
 script/source = "extends StaticBody3D
 
 func _get_wall_size():
-	return $MeshInstance3D.get_aabb().size.x
+	return $MeshInstance3D.mesh.size.x
 "
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jkan1"]
-size = Vector3(10, 2, 1)
+size = Vector3(20, 2, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_egau3"]
-size = Vector3(10, 2, 1)
+size = Vector3(20, 2, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rkhuf"]
 albedo_color = Color(0.780392, 0.141176, 0, 1)

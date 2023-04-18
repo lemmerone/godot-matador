@@ -2,13 +2,13 @@
 
 [ext_resource type="Script" path="res://main.gd" id="1_f6e0p"]
 [ext_resource type="PackedScene" uid="uid://c7m1richxkw1d" path="res://World/world.tscn" id="1_kutdq"]
+[ext_resource type="PackedScene" uid="uid://dchbd6novsg0o" path="res://Bull/bull.tscn" id="2_tk1ih"]
 [ext_resource type="PackedScene" uid="uid://b5ka4q4vq1vpx" path="res://Player/player.tscn" id="3_1lx15"]
-
-[sub_resource type="Curve3D" id="Curve3D_i2xko"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_f6e0p")
 num_sides = 5
+mob_scene = ExtResource("2_tk1ih")
 
 [node name="World" parent="." instance=ExtResource("1_kutdq")]
 
@@ -18,17 +18,10 @@ num_sides = 5
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1, 0)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-1, -8.74228e-08, 7.78408e-15, -5.6607e-08, 0.647508, 0.762058, -6.66213e-08, 0.762058, -0.647508, -0.491784, 20.8756, -20.6501)
-visible = false
-current = true
+transform = Transform3D(-1, -8.74228e-08, -3.82137e-15, 0, -4.37114e-08, 1, -8.74228e-08, 1, 4.37114e-08, 0, 49.4504, 0)
 
-[node name="SpawnPath" type="Path3D" parent="."]
-curve = SubResource("Curve3D_i2xko")
+[node name="MobTimer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
 
-[node name="PathLocation" type="PathFollow3D" parent="SpawnPath"]
-transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -1, 0, 0)
-
-[node name="BullTimer" type="Timer" parent="."]
-one_shot = true
-
-[connection signal="timeout" from="BullTimer" to="." method="_on_bull_timer_timeout"]
+[connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]

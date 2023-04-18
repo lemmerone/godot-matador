@@ -13,9 +13,12 @@ size = Vector3(2, 1, 1)
 
 [node name="Bull" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("1_mtp2l")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
 mesh = SubResource("BoxMesh_agbqp")
 surface_material_override/0 = SubResource("StandardMaterial3D_26o71")
 
