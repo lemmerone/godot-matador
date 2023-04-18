@@ -10,15 +10,11 @@ func _ready():
 	wallGenerator.wall_setting(num_sides, Vector3.ZERO, $World)
 
 func random_mob_poss():
-	var rng = RandomNumberGenerator.new()
-	var i = rng.randi_range(0, num_sides - 1)
-	return wallGenerator.center_walls[i]
+	return wallGenerator.center_walls[randi_range(0, num_sides - 1)]
 
 func _on_mob_timer_timeout():
 	var mob = mob_scene.instantiate()
-
 	var player_position = $Player.position
+	
 	mob.initialize(random_mob_poss(), player_position)
-
-	# Spawn the mob by adding it to the Main scene.
 	add_child(mob)
