@@ -19,4 +19,3 @@ func initialize(start_position, player_position):
 
 	velocity = Vector3.FORWARD * speed
 	velocity = velocity.rotated(Vector3.UP, rotation.y)
-	

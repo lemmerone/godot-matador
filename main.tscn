@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://c2tlrblo00eu6"]
+[gd_scene load_steps=5 format=3 uid="uid://c2tlrblo00eu6"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_f6e0p"]
 [ext_resource type="PackedScene" uid="uid://c7m1richxkw1d" path="res://World/world.tscn" id="1_kutdq"]
 [ext_resource type="PackedScene" uid="uid://dchbd6novsg0o" path="res://Bull/bull.tscn" id="2_tk1ih"]
 [ext_resource type="PackedScene" uid="uid://b5ka4q4vq1vpx" path="res://Player/player.tscn" id="3_1lx15"]
-[ext_resource type="PackedScene" uid="uid://bpy7xaglwexk0" path="res://HUD/Game Over/game_over.tscn" id="5_fgbh5"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_f6e0p")
@@ -24,16 +23,6 @@ transform = Transform3D(-1, -8.74228e-08, -3.82137e-15, 0, -4.37114e-08, 1, -8.7
 [node name="MobTimer" type="Timer" parent="."]
 wait_time = 3.0
 autostart = true
-
-[node name="HUD" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="GameOver" parent="HUD" instance=ExtResource("5_fgbh5")]
-visible = false
-layout_mode = 1
 
 [connection signal="hit" from="Player" to="." method="_on_player_hit"]
 [connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]
