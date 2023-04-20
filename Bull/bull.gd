@@ -15,7 +15,7 @@ func _physics_process(_delta):
 	move_and_slide()
 
 func initialize(start_position, player_position):
-	look_at_from_position(start_position, player_position, Vector3.UP)
+	look_at_from_position(start_position, Vector3.ZERO, Vector3.UP)
 
 	velocity = Vector3.FORWARD * speed
 	velocity = velocity.rotated(Vector3.UP, rotation.y)
