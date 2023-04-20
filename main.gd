@@ -18,3 +18,6 @@ func _on_mob_timer_timeout():
 	
 	mob.initialize(random_mob_poss(), player_position)
 	add_child(mob)
+
+func _on_player_hit():
+	$MobTimer.stop()

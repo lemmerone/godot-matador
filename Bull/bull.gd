@@ -7,6 +7,9 @@ var border_z = 40
 func _process(delta):
 	if (abs(position.x) > abs(border_x)) or (abs(position.z) > abs(border_z)):
 		queue_free()
+	#delete on release
+	if (Input.is_action_pressed("remove_mob")):
+		queue_free()
 
 func _physics_process(_delta):
 	move_and_slide()

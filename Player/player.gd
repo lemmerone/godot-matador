@@ -1,7 +1,10 @@
 extends CharacterBody3D
 
+signal hit
+
+@onready var health = 3
 var num_sides : int
-var step_rotation = 0.0
+var step_rotation : float
 var direction
 
 const SMOOTH_SPEED = 5.0
@@ -18,7 +21,7 @@ func direction_zero():
 
 func _get_spacing(count):
 	return 2 * PI / count
-	
+
 func _process(delta):
 	if (Input.is_action_just_pressed("rotation_right")):
 		step_rotation -= _get_spacing(num_sides)
@@ -39,3 +42,10 @@ func _process(delta):
 		position.z = lerp_angle(position.z, 0, delta * SMOOTH_SPEED)
 		
 	rotation.y = lerp_angle(rotation.y, step_rotation, delta * SMOOTH_SPEED)
+
+func die():
+	hit.emit()
+	queue_free()
+
+func _on_mob_detector_body_entered(body):
+	die()
