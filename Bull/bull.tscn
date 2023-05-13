@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Bull/bull.gd" id="1_mtp2l"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6arml"]
-size = Vector3(1.18329, 1, 1.07446)
+size = Vector3(1.10633, 1, 0.595108)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ywa1s"]
 resource_name = "material_0"
@@ -708,11 +708,11 @@ collision_mask = 0
 script = ExtResource("1_mtp2l")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(-3.3838e-08, 0, 1.58956, 0, 1.08484, 0, -0.774123, 0, -6.94819e-08, -0.0598021, 0.574647, 0.107264)
+transform = Transform3D(-7.58904e-08, 0, 1.58956, 0, 1.08484, 0, -1.73617, 0, -6.94819e-08, 0, 0, 0.744405)
 shape = SubResource("BoxShape3D_6arml")
 
 [node name="root" type="Node3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.625, 0.5, 0.125)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
 
 [node name="tail2" type="Node3D" parent="root"]
 transform = Transform3D(1, 0, 0, 0, 0.997881, -0.0650697, 0, 0.0650697, 0.997881, -1.66562, 0.3375, 0.0145833)
