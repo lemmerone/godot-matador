@@ -2,7 +2,7 @@ extends Node
 
 @onready var wallGenerator = get_node("/root/WallGenerator")
 @onready var player = get_node("Player")
-@export var num_sides : int
+@export var num_sides = 5
 @export var mob_scene: PackedScene
 
 func _ready():

@@ -7,7 +7,6 @@
 
 [node name="Main" type="Node"]
 script = ExtResource("1_f6e0p")
-num_sides = 5
 mob_scene = ExtResource("2_tk1ih")
 
 [node name="World" parent="." instance=ExtResource("1_kutdq")]
