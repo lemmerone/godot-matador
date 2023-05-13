@@ -1,7 +1,7 @@
 extends Control
 
 func _on_restart_pressed():
-	get_tree().change_scene_to_file("res://main.tscn")
+	get_tree().change_scene_to_file("res://Levels/Select Level/select_level.tscn")
 
 func _on_menu_pressed():
-	get_tree().change_scene_to_file("res://HUD/Menu/menu.tscn")
+	get_tree().change_scene_to_file("res://Levels/Menu/menu.tscn")

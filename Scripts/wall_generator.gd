@@ -4,10 +4,10 @@ var wall = preload("res://World/Wall/wall.tscn")
 var side_length = 25
 var center_walls = []
 
-func wall_setting(num_sides, center, node):
-	var angle_increment = 2 * PI / num_sides
-	var radius = side_length / (2 * tan(PI / num_sides))
-	for i in range(num_sides):
+func wall_setting(center, node):
+	var angle_increment = 2 * PI / GlobalVariables.sides
+	var radius = side_length / (2 * tan(PI / GlobalVariables.sides))
+	for i in range(GlobalVariables.sides):
 		var newWall = wall.instantiate()
 		var angle = i * angle_increment
 		var x  = sin(angle) * radius

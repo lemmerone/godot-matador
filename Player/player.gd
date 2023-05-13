@@ -3,7 +3,6 @@ extends CharacterBody3D
 signal hit
 
 @onready var health = 2
-var num_sides : int
 var step_rotation : float
 var direction
 
@@ -13,12 +12,6 @@ const DODGE_SPEED = 3
 func _ready():
 	$HUD/Label.text = var_to_str(health)
 
-func get_num_sides():
-	return num_sides
-
-func set_num_sides(count):
-	num_sides = count
-
 func direction_zero():
 	direction = (transform.basis * Vector3.ZERO).normalized()
 
@@ -27,10 +20,10 @@ func _get_spacing(count):
 
 func _process(delta):
 	if (Input.is_action_just_pressed("rotation_right")):
-		step_rotation -= _get_spacing(num_sides)
+		step_rotation -= _get_spacing(GlobalVariables.sides)
 		direction_zero()
 	elif (Input.is_action_just_pressed("rotation_left")):
-		step_rotation += _get_spacing(num_sides)
+		step_rotation += _get_spacing(GlobalVariables.sides)
 		direction_zero()
 	elif (Input.is_action_just_pressed("dodge")):
 		direction = (transform.basis * Vector3.RIGHT).normalized()
