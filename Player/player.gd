@@ -2,13 +2,16 @@ extends CharacterBody3D
 
 signal hit
 
-@onready var health = 3
+@onready var health = 2
 var num_sides : int
 var step_rotation : float
 var direction
 
 const SMOOTH_SPEED = 5.0
 const DODGE_SPEED = 3
+
+func _ready():
+	$HUD/Label.text = var_to_str(health)
 
 func get_num_sides():
 	return num_sides
@@ -48,4 +51,10 @@ func die():
 	queue_free()
 
 func _on_mob_detector_body_entered(body):
-	die()
+		damage()
+
+func damage():
+	health -= 1
+	$HUD/Label.text = var_to_str(health)
+	if health == 0:
+		die()

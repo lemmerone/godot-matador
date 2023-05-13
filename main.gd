@@ -21,4 +21,4 @@ func _on_mob_timer_timeout():
 
 func _on_player_hit():
 	$MobTimer.stop()
-	get_tree().change_scene_to_file("res://HUD/Game Over/game_over.tscn")
+	get_tree().change_scene_to_file("res://Levels/Game Over/game_over.tscn")

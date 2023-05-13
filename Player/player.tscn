@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://b5ka4q4vq1vpx"]
+[gd_scene load_steps=8 format=3 uid="uid://b5ka4q4vq1vpx"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_ejmbr"]
+[ext_resource type="PackedScene" uid="uid://b8tbuxydqoan0" path="res://HUD/hud.tscn" id="2_w6vqx"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pkwxm"]
 albedo_color = Color(0, 0.360784, 0.639216, 1)
@@ -46,5 +47,7 @@ shape = SubResource("CapsuleShape3D_xgxii")
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-1, -3.41911e-08, 8.04594e-08, 0, 0.920348, 0.391101, -8.74228e-08, 0.391101, -0.920348, 0.881365, 2.68098, -4.4071)
 current = true
+
+[node name="HUD" parent="." instance=ExtResource("2_w6vqx")]
 
 [connection signal="body_entered" from="MobDetector" to="." method="_on_mob_detector_body_entered"]
