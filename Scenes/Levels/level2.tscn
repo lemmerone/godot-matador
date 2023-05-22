@@ -1,0 +1,63 @@
+[gd_scene load_steps=7 format=3 uid="uid://dn3bkl7d1dnqy"]
+
+[ext_resource type="Script" path="res://Scenes/Levels/level2.gd" id="1_w1vvk"]
+[ext_resource type="PackedScene" uid="uid://dchbd6novsg0o" path="res://Bull/bull.tscn" id="2_yi2ld"]
+[ext_resource type="PackedScene" uid="uid://c7m1richxkw1d" path="res://World/world.tscn" id="3_3ggge"]
+[ext_resource type="PackedScene" uid="uid://bb4nkcikpxo2n" path="res://Coin/coin.tscn" id="3_rekua"]
+[ext_resource type="PackedScene" uid="uid://b5ka4q4vq1vpx" path="res://Player/player.tscn" id="4_cj1a6"]
+[ext_resource type="PackedScene" uid="uid://b1wgltiptih6h" path="res://Timer/game_timer.tscn" id="5_1l5k3"]
+
+[node name="Level_2" type="Node"]
+script = ExtResource("1_w1vvk")
+mob_scene = ExtResource("2_yi2ld")
+coin_scene = ExtResource("3_rekua")
+
+[node name="World" parent="." instance=ExtResource("3_3ggge")]
+
+[node name="Light" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 10.4713, 0)
+light_energy = 2.137
+
+[node name="Player" parent="." instance=ExtResource("4_cj1a6")]
+
+[node name="MobTimer" type="Timer" parent="."]
+wait_time = 3.0
+
+[node name="CoinTimer" type="Timer" parent="."]
+wait_time = 6.0
+
+[node name="GameTimer" parent="." instance=ExtResource("5_1l5k3")]
+
+[node name="Tutorial" type="Control" parent="."]
+top_level = true
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -546.0
+offset_top = 30.0
+offset_right = -546.0
+offset_bottom = 30.0
+grow_horizontal = 2
+
+[node name="Start" type="Label" parent="Tutorial"]
+layout_mode = 0
+offset_right = 359.0
+offset_bottom = 52.0
+text = "Собирай монетки!
+Продержись 1 минуту!"
+
+[node name="Сontinue" type="Button" parent="Tutorial"]
+layout_mode = 1
+offset_left = 1.0
+offset_top = 57.0
+offset_right = 112.0
+offset_bottom = 88.0
+text = "Продолжить
+"
+
+[connection signal="coin" from="Player" to="." method="_on_player_coin"]
+[connection signal="hit" from="Player" to="." method="_on_player_hit"]
+[connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]
+[connection signal="timeout" from="CoinTimer" to="." method="_on_coin_timer_timeout"]
+[connection signal="pressed" from="Tutorial/Сontinue" to="." method="_on_button_pressed"]

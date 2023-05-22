@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bb4nkcikpxo2n"]
+
+[ext_resource type="Script" path="res://Coin/coin.gd" id="1_65ccc"]
+
+[sub_resource type="TorusMesh" id="TorusMesh_fucpm"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_0q3wi"]
+
+[node name="Coin" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_65ccc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, -0.0435779, -0.498097, 0, 0.498097, -0.0435779, 0, 0.0986423, 0)
+mesh = SubResource("TorusMesh_fucpm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00860387, 0.0975744, 0)
+shape = SubResource("SphereShape3D_0q3wi")

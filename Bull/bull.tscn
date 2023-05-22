@@ -715,7 +715,7 @@ shape = SubResource("BoxShape3D_6arml")
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
 
 [node name="tail2" type="Node3D" parent="root"]
-transform = Transform3D(1, 0, 0, 0, 0.997881, -0.0650697, 0, 0.0650697, 0.997881, -1.66562, 0.3375, 0.0145833)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.66562, 0.3375, 0.0145833)
 
 [node name="tail" type="MeshInstance3D" parent="root/tail2"]
 transform = Transform3D(0.92388, 0.382683, 0, -0.382683, 0.92388, 0, 0, 0, 1, -0.110335, -0.302985, -0.0208333)
@@ -723,7 +723,7 @@ mesh = SubResource("ArrayMesh_8fvqo")
 skeleton = NodePath("")
 
 [node name="neck2" type="Node3D" parent="root"]
-transform = Transform3D(0.995524, -0.0945088, 0, 0.0945088, 0.995524, 0, 0, 0, 1, -0.352399, 0.119203, -4.16334e-17)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.352399, 0.119203, -4.16334e-17)
 
 [node name="neck" type="MeshInstance3D" parent="root/neck2"]
 transform = Transform3D(0.953717, 0.300706, 0, -0.300706, 0.953717, 0, 0, 0, 1, 0, 0, 0)
@@ -731,7 +731,7 @@ mesh = SubResource("ArrayMesh_b61al")
 skeleton = NodePath("")
 
 [node name="bodyback" type="Node3D" parent="root"]
-transform = Transform3D(1, 0, 0, 0, 0.996811, 0.0797979, 0, -0.0797979, 0.996811, -1.40625, 0.0963941, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.40625, 0.0625, 0)
 
 [node name="back" type="MeshInstance3D" parent="root/bodyback"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.78125, -0.875, -0.125)
@@ -739,7 +739,7 @@ mesh = SubResource("ArrayMesh_jii67")
 skeleton = NodePath("")
 
 [node name="bodycenter" type="Node3D" parent="root"]
-transform = Transform3D(1, 0, 0, 0, 0.996811, -0.0797979, 0, 0.0797979, 0.996811, -0.8125, 0.153606, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8125, 0.1875, 0)
 
 [node name="center" type="MeshInstance3D" parent="root/bodycenter"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1875, -1, -0.125)
@@ -747,7 +747,7 @@ mesh = SubResource("ArrayMesh_i3hbt")
 skeleton = NodePath("")
 
 [node name="backupright" type="Node3D" parent="root"]
-transform = Transform3D(0.937668, 0.347532, 0, -0.347532, 0.937668, 0, 0, 0, 1, -1.46875, -0.168269, 0.33125)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.46875, -0.134375, 0.33125)
 
 [node name="back up right" type="MeshInstance3D" parent="root/backupright"]
 transform = Transform3D(0.991445, 0.130526, 0, -0.130526, 0.991445, 0, 0, 0, 1, 0, 0, 0)
@@ -755,14 +755,14 @@ mesh = SubResource("ArrayMesh_g3pye")
 skeleton = NodePath("")
 
 [node name="footbackright" type="Node3D" parent="root"]
-transform = Transform3D(0.900626, 0.434594, 0, -0.434594, 0.900626, 0, 0, 0, 1, -1.56779, -0.375, 0.3375)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, -0.375, 0.3375)
 
 [node name="foot back right" type="MeshInstance3D" parent="root/footbackright"]
 mesh = SubResource("ArrayMesh_sxmu0")
 skeleton = NodePath("")
 
 [node name="backupleft" type="Node3D" parent="root"]
-transform = Transform3D(0.937668, 0.347532, 0, -0.347532, 0.937668, 0, 0, 0, 1, -1.46875, -0.168269, -0.33125)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.46875, -0.134375, -0.33125)
 
 [node name="back up left" type="MeshInstance3D" parent="root/backupleft"]
 transform = Transform3D(0.991445, 0.130526, 0, -0.130526, 0.991445, 0, 0, 0, 1, 0, 0, 5.55112e-17)
@@ -770,7 +770,7 @@ mesh = SubResource("ArrayMesh_lx8q3")
 skeleton = NodePath("")
 
 [node name="footbackleft" type="Node3D" parent="root"]
-transform = Transform3D(0.900626, 0.434594, 0, -0.434594, 0.900626, 0, 0, 0, 1, -1.56779, -0.375, 0.3375)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, -0.375, 0.3375)
 
 [node name="foot back left" type="MeshInstance3D" parent="root/footbackleft"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.675)
@@ -778,7 +778,7 @@ mesh = SubResource("ArrayMesh_ec10p")
 skeleton = NodePath("")
 
 [node name="centerupleft" type="Node3D" parent="root"]
-transform = Transform3D(0.879058, -0.476714, 0, 0.476714, 0.879058, 0, 0, 0, 1, -0.78125, -0.100481, -0.39375)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.78125, -0.134375, -0.39375)
 
 [node name="center up left" type="MeshInstance3D" parent="root/centerupleft"]
 transform = Transform3D(0.887011, 0.461749, 0, -0.461749, 0.887011, 0, 0, 0, 1, -2.22045e-16, -2.22045e-16, 5.55112e-17)
@@ -786,7 +786,7 @@ mesh = SubResource("ArrayMesh_5xsfu")
 skeleton = NodePath("")
 
 [node name="footcenterleft" type="Node3D" parent="root"]
-transform = Transform3D(0.879058, -0.476714, 0, 0.476714, 0.879058, 0, 0, 0, 1, -0.805455, -0.375872, -0.4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.941031, -0.38943, -0.4)
 
 [node name="foot center left" type="MeshInstance3D" parent="root/footcenterleft"]
 transform = Transform3D(0.887011, 0.461749, 0, -0.461749, 0.887011, 0, 0, 0, 1, -0.0277191, 0.0144296, 0)
@@ -794,7 +794,7 @@ mesh = SubResource("ArrayMesh_jbel6")
 skeleton = NodePath("")
 
 [node name="centerupright" type="Node3D" parent="root"]
-transform = Transform3D(0.879058, -0.476714, 0, 0.476714, 0.879058, 0, 0, 0, 1, -0.78125, -0.0379809, 0.39375)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.78125, -0.071875, 0.39375)
 
 [node name="center up right" type="MeshInstance3D" parent="root/centerupright"]
 transform = Transform3D(0.887011, 0.461749, 0, -0.461749, 0.887011, 0, 0, 0, 1, -1.11022e-16, -0.0625, 0)
@@ -802,7 +802,7 @@ mesh = SubResource("ArrayMesh_ueui4")
 skeleton = NodePath("")
 
 [node name="footenterright" type="Node3D" parent="root"]
-transform = Transform3D(0.879058, -0.476714, 0, 0.476714, 0.879058, 0, 0, 0, 1, -0.805455, -0.375872, 0.4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.941031, -0.38943, 0.4)
 
 [node name="foot сenter right" type="MeshInstance3D" parent="root/footenterright"]
 transform = Transform3D(0.887011, 0.461749, 0, -0.461749, 0.887011, 0, 0, 0, 1, -0.0277191, 0.0144296, 0)
@@ -810,7 +810,7 @@ mesh = SubResource("ArrayMesh_ngv4r")
 skeleton = NodePath("")
 
 [node name="head2" type="Node3D" parent="root"]
-transform = Transform3D(1, 0, 0, 0, 0.997373, 0.0724358, 0, -0.0724358, 0.997373, 0.0933026, 0.0168054, 0.0015203)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0933026, -0.0170886, 0.0015203)
 
 [node name="head" type="MeshInstance3D" parent="root/head2"]
 transform = Transform3D(0.991445, 0.130526, 0, -0.130526, 0.991445, 0, 0, 0, 1, -0.0933026, 0.0170886, -0.0015203)
